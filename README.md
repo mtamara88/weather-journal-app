@@ -14,7 +14,7 @@ Project 3 - Weather Journal App (Front End Developer Udacity Nanodegree)
 This project is about working with Web APIs and asynchronous code, creating a web app that uses [OpenWeatherMap](https://openweathermap.org/) API to get weather based on user's location, and dynamically update UI. The user can input their zip code (US only) and enter their feelings, which will generate a journal entry. This entry includes the current date, temperature at the location they entered and the text the user wrote.
 	
 ## Preview
-![Weatherapp](website\img\weather-app.png)
+![Weatherapp](website/img/weather-app.png)
 
 ## Instructions
 * Download the app zip file.
