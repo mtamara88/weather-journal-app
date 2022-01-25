@@ -26,10 +26,8 @@ function performAction(e) {
             .then(function (data) {
                 // add data to POST request
                 postData('/addData', { temp: data.main.temp, date: newDate, content: content })
-            })
-            .then(
                 updateUI()
-            )
+            })
     }
 }
 
@@ -70,11 +68,9 @@ const updateUI = async () => {
     const request = await fetch('/all')
     try {
         const allData = await request.json()
-        console.log(allData);
-        document.getElementById('date').innerHTML = allData[0].date;
-        document.getElementById('temp').innerHTML = Math.round(allData[0].temp) + ' &deg;C';
-        document.getElementById('content').innerHTML = allData[0].content;
-
+        document.getElementById('date').innerHTML = "Date: " + allData.date;
+        document.getElementById('temp').innerHTML = "Temperature: " + Math.round(allData.temp) + ' &deg;C';
+        document.getElementById('content').innerHTML = "User response: " + allData.content;
     } catch (error) {
         console.log("error", error)
     }
